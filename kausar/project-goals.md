@@ -1,4 +1,4 @@
-Based on your proposed approach and evaluation plan, I can suggest several scripts to help you accomplish your objectives using CausalWorld. Here are some ideas with code snippets:
+Here are some ideas with code snippets:
 
 1. Creating Demonstrations
 
