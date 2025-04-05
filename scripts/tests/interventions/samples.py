@@ -18,6 +18,7 @@ Such RL policies that have causal structure baked in them could exhibit positive
 
 from causal_world.envs.causalworld import CausalWorld
 from causal_world.task_generators.task import generate_task
+from rlpyt.envs.gym import GymEnvWrapper
 import numpy as np
 
 def get_full_state():
@@ -29,6 +30,16 @@ def get_full_state():
             obs, reward, done, info = env.step(env.action_space.sample())
     print(env.get_current_state_variables())
     env.close()
+
+def _make_env(rank):
+    task = generate_task(task_generator_id='reaching')
+    env = CausalWorld(task=task,
+                      skip_frame=10,
+                      enable_visualization=False,
+                      seed=0 + rank,
+                      max_episode_length=600)
+    env = GymEnvWrapper(env)
+    return env
 
 
 def random_intervention():
