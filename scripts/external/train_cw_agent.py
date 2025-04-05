@@ -6,6 +6,12 @@ from absl import app, flags
 import os
 import datetime
 import time  # Added for timing measurements
+import gymnasium as gym
+print("Gym version:", gym.__version__)
+from shimmy import GymV21CompatibilityV0
+
+import sys
+sys.modules['gym'] = __import__('gymnasium', fromlist=[''])
 
 from causal_world.task_generators import generate_task
 from causal_world.envs import CausalWorld
@@ -19,6 +25,7 @@ from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.vec_env import SubprocVecEnv
 from stable_baselines3.common.logger import configure
 from stable_baselines3.common.callbacks import CallbackList, CheckpointCallback, EvalCallback
+from stable_baselines3.common.env_checker import check_env
 from causal_world.wrappers.action_wrappers import MovingAverageActionEnvWrapper
 
 FLAGS = flags.FLAGS
@@ -48,10 +55,16 @@ def _make_env(rank, name, seed=0, log_dir='test', vis=False):
             enable_visualization=vis,
             seed=seed+rank
         )
+        env = GymV21CompatibilityV0(env)
         env = MovingAverageActionEnvWrapper(env)
         env = Monitor(env, log_dir)
+        
         print(f"• Action space: {env.action_space}")
         print(f"• Observation space: {env.observation_space}\n")
+        
+        check_env(env, warn=True)
+        print(f"Environment {rank} initialized successfully.")
+        
         return env
     return _init
 
@@ -99,6 +112,7 @@ def train(task, save_dir, total_timesteps=1e4, save_freq=1e3, n_envs=10):
     
     task = generate_task(task_generator_id='pushing')
     eval_env = CausalWorld(task=task)
+    eval_env = GymV21CompatibilityV0(eval_env)
 
     eval_callback = EvalCallback(
         eval_env, 
