@@ -125,3 +125,7 @@ howpublished = {https://github.com/yourusername/causal-rl}
 ## 📜 License
 MIT License - See [LICENSE](LICENSE) for details
 ```
+
+Repos I found online:
+* https://github.com/mwlodarzc/causal-world-generalization/blob/master/scripts/
+* https://github.com/lcastri/CausalWorld/blob/master/

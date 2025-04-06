@@ -1,5 +1,7 @@
-import os
-os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"  # Allows multiple OpenMP runtimes (unsafe but quick)
+# import os
+# os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"  # Allows multiple OpenMP runtimes (unsafe but quick)
+# TODO: install torch, scipy and rlpyt
+from causal_world.envs import CausalWorld
 
 import numpy as np
 import torch
@@ -13,10 +15,10 @@ from rlpyt.samplers.serial.sampler import SerialSampler
 from rlpyt.utils.logging.context import logger_context
 from rlpyt.spaces.gym_wrapper import GymSpaceWrapper
 
-import sys
-sys.path.append(r"C:\Users\kausa\CausalWorld")
+# import sys
+# sys.path.append(r"C:\Users\kausa\CausalWorld")
 
-from causal_world.envs import CausalWorld
+
 from causal_world.task_generators.task import generate_task
 
 
