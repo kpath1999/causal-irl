@@ -1,3 +1,6 @@
+import pybullet as p
+p.connect(p.DIRECT)
+
 from rlpyt.samplers.parallel.cpu.sampler import CpuSampler
 from rlpyt.algos.pg.ppo import PPO
 from rlpyt.agents.pg.mujoco import MujocoFfAgent
@@ -25,7 +28,7 @@ def _make_env(rank):
                       seed=0 + rank)
     env = CurriculumWrapper(env,
                             intervention_actors=[GoalInterventionActorPolicy()],
-                            actives=(0, 1e9, 2, 0))
+                            actives=[(0, 1e9, 2, 0)])
     env = GymEnvWrapper(env)
     return env
 
