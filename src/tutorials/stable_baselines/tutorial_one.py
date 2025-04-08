@@ -82,7 +82,7 @@ if __name__ == '__main__':
                     help="total time steps per update")
     ap.add_argument("--num_of_envs",
                     required=False,
-                    default=20,
+                    default=5,
                     help="number of parallel environments")
     ap.add_argument("--task_name",
                     required=False,
