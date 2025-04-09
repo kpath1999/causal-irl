@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![CausalWorld Compatibility](https://img.shields.io/badge/CausalWorld-1.2+-orange)](https://causal-world.github.io/)
 
-Robust RL agents that understand *why* actions lead to outcomes through causal interventions. Built for the [CausalWorld](https://causal-world.github.io/) robotic manipulation benchmark.
+Robust RL agents that understand *why* actions lead to outcomes through causal interventions. Built for the [CausalWorld](https://causal-world.readthedocs.io/en/latest/) robotic manipulation benchmark.
 
 ![CausalWorld Intervention Demo](https://example.com/path/to/demo_gif.gif) *Replace with actual demo media*
 
