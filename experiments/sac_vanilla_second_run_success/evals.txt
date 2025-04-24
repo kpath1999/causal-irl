@@ -1,0 +1,60 @@
+====== Experiment Configuration ======
+• Task: pushing
+• Number of environments: 1
+• Total timesteps: 1,000,000.0
+• Save directory: sac_vanilla_second_run_success
+
+=== Evaluation Mode Activated ===
+
+====== Evaluation Mode ======
+Loading results from: sac_vanilla_second_run_success
+
+Training Statistics Summary:
+• Total training episodes: 299
+• Final Mean Reward: 0.24
+• Max Reward Achieved: 0.98
+• Min Reward Achieved: -0.00
+
+Saved training progress plot to 'training_progress.png'
+
+====== Benchmark Evaluation ======
+Loading best model from: sac_vanilla_second_run_success\logs\best_model\best_model.zip
+Loading a model without an environment, this model cannot be trained until it has a valid environment.
+2025-04-23 20:18:44.519051: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow 
+binary was not compiled to use: AVX2
+2025-04-23 20:18:44.529057: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'nvcuda.dll'; dlerror: nvcuda.dll not found
+2025-04-23 20:18:44.529874: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)
+2025-04-23 20:18:44.530602: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: DESKTOP-58JC7I3
+2025-04-23 20:18:44.531244: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: DESKTOP-58JC7I3
+Model loaded successfully.
+
+Running evaluation protocol...
+I0423 20:18:46.917942 14796 evaluation.py:165] Applying the following protocol now, P0
+I0423 20:18:50.713089 14796 evaluation.py:165] Applying the following protocol now, P1
+I0423 20:18:54.628540 14796 evaluation.py:165] Applying the following protocol now, P2
+I0423 20:18:58.528179 14796 evaluation.py:165] Applying the following protocol now, P3
+I0423 20:19:01.948204 14796 evaluation.py:165] Applying the following protocol now, P4
+I0423 20:19:05.158046 14796 evaluation.py:165] Applying the following protocol now, P5
+I0423 20:19:08.448055 14796 evaluation.py:165] Applying the following protocol now, P6
+I0423 20:19:11.522831 14796 evaluation.py:165] Applying the following protocol now, P7
+I0423 20:19:14.067945 14796 evaluation.py:165] Applying the following protocol now, P8
+I0423 20:19:16.688211 14796 evaluation.py:165] Applying the following protocol now, P9
+W0423 20:19:16.795820 14796 base_task.py:1170] Applying intervention lead to infeasibility of the robot
+W0423 20:19:16.797905 14796 causalworld.py:482] Invalid Intervention was just executed!
+I0423 20:19:20.138161 14796 evaluation.py:165] Applying the following protocol now, P10
+I0423 20:19:22.803357 14796 evaluation.py:165] Applying the following protocol now, P11
+
+Evaluation Results:
+• P0: {'mean_full_integrated_fractional_success': 0.0, 'std_full_integrated_fractional_success': 0.0, 'mean_last_integrated_fractional_success': 0.0, 'std_last_integrated_fractional_success': 0.0, 'mean_last_fractional_success': 0.0, 'std_last_fractional_success': 0.0, 'total_intervention_steps': 1, 'total_interventions': 0, 'total_timesteps': 0, 'total_resets': 0}
+• P1: {'mean_full_integrated_fractional_success': 0.0, 'std_full_integrated_fractional_success': 0.0, 'mean_last_integrated_fractional_success': 0.0, 'std_last_integrated_fractional_success': 0.0, 'mean_last_fractional_success': 0.0, 'std_last_fractional_success': 0.0, 'total_intervention_steps': 2, 'total_interventions': 1, 'total_timesteps': 834, 'total_resets': 1}
+• P2: {'mean_full_integrated_fractional_success': 0.0, 'std_full_integrated_fractional_success': 0.0, 'mean_last_integrated_fractional_success': 0.0, 'std_last_integrated_fractional_success': 0.0, 'mean_last_fractional_success': 0.0, 'std_last_fractional_success': 0.0, 'total_intervention_steps': 3, 'total_interventions': 2, 'total_timesteps': 1668, 'total_resets': 2}
+• P3: {'mean_full_integrated_fractional_success': 0.0, 'std_full_integrated_fractional_success': 0.0, 'mean_last_integrated_fractional_success': 0.0, 'std_last_integrated_fractional_success': 0.0, 'mean_last_fractional_success': 0.0, 'std_last_fractional_success': 0.0, 'total_intervention_steps': 4, 'total_interventions': 3, 'total_timesteps': 2502, 'total_resets': 3}
+• P4: {'mean_full_integrated_fractional_success': 0.0, 'std_full_integrated_fractional_success': 0.0, 'mean_last_integrated_fractional_success': 0.0, 'std_last_integrated_fractional_success': 0.0, 'mean_last_fractional_success': 0.0, 'std_last_fractional_success': 0.0, 'total_intervention_steps': 5, 'total_interventions': 4, 'total_timesteps': 3336, 'total_resets': 4}
+• P5: {'mean_full_integrated_fractional_success': 0.0, 'std_full_integrated_fractional_success': 0.0, 'mean_last_integrated_fractional_success': 0.0, 'std_last_integrated_fractional_success': 0.0, 'mean_last_fractional_success': 0.0, 'std_last_fractional_success': 0.0, 'total_intervention_steps': 6, 'total_interventions': 5, 'total_timesteps': 4170, 'total_resets': 5}
+• P6: {'mean_full_integrated_fractional_success': 0.0, 'std_full_integrated_fractional_success': 0.0, 'mean_last_integrated_fractional_success': 0.0, 'std_last_integrated_fractional_success': 0.0, 'mean_last_fractional_success': 0.0, 'std_last_fractional_success': 0.0, 'total_intervention_steps': 7, 'total_interventions': 7, 'total_timesteps': 5004, 'total_resets': 6}
+• P7: {'mean_full_integrated_fractional_success': 0.0, 'std_full_integrated_fractional_success': 0.0, 'mean_last_integrated_fractional_success': 0.0, 'std_last_integrated_fractional_success': 0.0, 'mean_last_fractional_success': 0.0, 'std_last_fractional_success': 0.0, 'total_intervention_steps': 8, 'total_interventions': 9, 'total_timesteps': 5838, 'total_resets': 7}
+• P8: {'mean_full_integrated_fractional_success': 0.0, 'std_full_integrated_fractional_success': 0.0, 'mean_last_integrated_fractional_success': 0.0, 'std_last_integrated_fractional_success': 0.0, 'mean_last_fractional_success': 0.0, 'std_last_fractional_success': 0.0, 'total_intervention_steps': 9, 'total_interventions': 11, 'total_timesteps': 6672, 'total_resets': 8}
+• P9: {'mean_full_integrated_fractional_success': 0.0, 'std_full_integrated_fractional_success': 0.0, 'mean_last_integrated_fractional_success': 0.0, 'std_last_integrated_fractional_success': 0.0, 'mean_last_fractional_success': 0.0, 'std_last_fractional_success': 0.0, 'total_intervention_steps': 11, 'total_interventions': 17, 'total_timesteps': 7506, 'total_resets': 9}
+• P10: {'mean_full_integrated_fractional_success': 0.18181945314664855, 'std_full_integrated_fractional_success': 0.0, 'mean_last_integrated_fractional_success': 0.18222893269755078, 'std_last_integrated_fractional_success': 0.0, 'mean_last_fractional_success': 0.1821150511902133, 'std_last_fractional_success': 0.0, 'total_intervention_steps': 12, 'total_interventions': 35, 'total_timesteps': 8340, 'total_resets': 10}
+• P11: {'mean_full_integrated_fractional_success': 0.0, 'std_full_integrated_fractional_success': 0.0, 'mean_last_integrated_fractional_success': 0.0, 'std_last_integrated_fractional_success': 0.0, 'mean_last_fractional_success': 0.0, 'std_last_fractional_success': 
+0.0, 'total_intervention_steps': 13, 'total_interventions': 53, 'total_timesteps': 9174, 'total_resets': 11}
