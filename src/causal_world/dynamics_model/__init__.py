@@ -1,1 +1,0 @@
-from causal_world.dynamics_model.simulator_model import SimulatorModel

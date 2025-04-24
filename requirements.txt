@@ -5,7 +5,6 @@ astor==0.8.1
 Babel==2.14.0
 catkin-pkg==1.0.0
 causal-world==1.2
-certifi @ file:///C:/b/abs_85o_6fm0se/croot/certifi_1671487778835/work/certifi
 charset-normalizer==3.4.1
 cloudpickle==2.2.1
 colorama==0.4.6
@@ -51,7 +50,7 @@ pytest==7.4.4
 python-dateutil==2.9.0.post0
 pytz==2025.2
 requests==2.31.0
--e c:\users\kausa\causalworld\rlpyt_lib
+rlpyt_lib
 scipy==1.7.3
 six==1.17.0
 snowballstemmer==2.2.0
